@@ -1,4 +1,5 @@
 
+import { ArrowUpRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import profile from '../assets/profile.jpg'
 import SiteHeader from '../components/SiteHeader'
@@ -15,14 +16,14 @@ function CardArrow() {
       aria-hidden="true"
       className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 text-lg text-white/50 transition-colors group-hover:border-[#D4B779]/60 group-hover:text-[#D4B779]"
     >
-      ↗
+      <ArrowUpRight className="h-4 w-4" />
     </span>
   )
 }
 
 function Home() {
   return (
-    <div className="min-h-screen bg-[#07182F] text-white">
+    <div className="min-h-screen bg-transparent text-white">
       <SiteHeader />
 
       <main className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8 lg:py-10">
@@ -48,7 +49,7 @@ function Home() {
                   to="/works"
                   className="mt-5 inline-flex min-h-11 items-center gap-3 rounded-xl bg-[#D4B779] px-4 py-2.5 text-sm font-semibold text-[#0B2342] transition-colors hover:bg-white"
                 >
-                  Explore my work <span aria-hidden="true">↗</span>
+                  Explore my work <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
                 </Link>
               </div>
             </article>
@@ -153,7 +154,7 @@ function Home() {
             </section>
 
             <Link to="/contact" className={`${cardClass} flex min-h-[190px] flex-col justify-between p-6 sm:p-8`}>
-              <span aria-hidden="true" className="text-3xl text-white/25">✳</span>
+              <Sparkles aria-hidden="true" className="h-7 w-7 text-white/25" />
               <div className="flex items-end justify-between gap-4">
                 <h2 className="text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
                   Let's work <span className="text-[#D4B779]">together.</span>
@@ -174,6 +175,4 @@ function Home() {
 }
 
 export default Home
-
-
 

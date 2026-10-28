@@ -1,5 +1,6 @@
 
 import { useEffect } from 'react'
+import { ArrowUpRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import SiteHeader from '../components/SiteHeader'
 import profile from '../assets/profile.jpg'
@@ -72,7 +73,7 @@ function About() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-[#07182F] text-white">
+    <div className="min-h-screen bg-transparent text-white">
       <SiteHeader />
 
       <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-8 lg:py-10">
@@ -89,7 +90,7 @@ function About() {
             <div className="grid gap-3 md:col-span-9">
               <div className="flex items-center justify-between gap-3 px-1">
                 <p className={labelClass}>A little about me</p>
-                <span aria-hidden="true" className="text-xl text-[#D4B779]/70">✳</span>
+                <Sparkles aria-hidden="true" className="h-5 w-5 text-[#D4B779]/70" />
               </div>
               <article data-scroll-reveal className="flex min-h-[190px] flex-col justify-center rounded-3xl border border-[#D4B779]/15 bg-[#102747] p-5 sm:p-7 lg:p-8">
                 <h1 id="about-title" className="text-3xl font-semibold uppercase leading-tight tracking-tight sm:text-5xl">
@@ -121,7 +122,7 @@ function About() {
                       <p className="text-[10px] text-white/40">{area.number} · {area.category}</p>
                       <h3 className="mt-0.5 text-sm font-medium transition-colors group-hover/area:text-[#D4B779]">{area.title}</h3>
                     </div>
-                    <span aria-hidden="true" className="text-sm text-white/30 transition-transform group-hover/area:translate-x-1 group-hover/area:text-[#D4B779]">↗</span>
+                    <ArrowUpRight aria-hidden="true" className="h-4 w-4 shrink-0 text-white/30 transition-transform group-hover/area:translate-x-1 group-hover/area:text-[#D4B779]" />
                   </div>
                 ))}
               </div>
@@ -153,15 +154,15 @@ function About() {
               <span className="text-3xl font-semibold italic tracking-tight text-[#D4B779]/80">CS</span>
               <span>
                 <span className={labelClass}>Explore</span>
-                <span className="mt-1 flex items-center justify-between text-sm font-medium">Selected work <span aria-hidden="true" className="text-white/40 transition-transform group-hover:translate-x-1 group-hover:text-[#D4B779]">↗</span></span>
+                <span className="mt-1 flex items-center justify-between text-sm font-medium">Selected work <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-white/40 transition-transform group-hover:translate-x-1 group-hover:text-[#D4B779]" /></span>
               </span>
             </Link>
 
             <Link data-scroll-reveal to="/contact" className="group flex min-h-32 flex-col justify-between rounded-3xl border border-[#D4B779]/15 bg-[#102747] p-5 transition duration-500 ease-out hover:-translate-y-1 hover:border-[#D4B779]/45 hover:bg-[#143052] motion-reduce:transform-none sm:col-span-2 sm:p-6">
-              <span aria-hidden="true" className="text-2xl text-[#D4B779]/60">✳</span>
+              <Sparkles aria-hidden="true" className="h-6 w-6 text-[#D4B779]/60" />
               <span className="flex items-end justify-between gap-3">
                 <span className="text-2xl font-medium leading-tight sm:text-3xl">Let’s work <span className="text-[#D4B779]">together.</span></span>
-                <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 text-lg text-white/50 transition-colors group-hover:border-[#D4B779]/60 group-hover:text-[#D4B779]">↗</span>
+                <span aria-hidden="true" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/10 text-lg text-white/50 transition-colors group-hover:border-[#D4B779]/60 group-hover:text-[#D4B779]"><ArrowUpRight className="h-4 w-4" /></span>
               </span>
             </Link>
 
@@ -169,7 +170,7 @@ function About() {
               <span className="text-3xl font-medium text-white/80">05</span>
               <span>
                 <span className={labelClass}>Practice areas</span>
-                <span className="mt-1 flex items-center justify-between text-sm font-medium">My focus <span aria-hidden="true" className="text-white/40 transition-transform group-hover:translate-x-1 group-hover:text-[#D4B779]">↗</span></span>
+                <span className="mt-1 flex items-center justify-between text-sm font-medium">My focus <ArrowUpRight aria-hidden="true" className="h-4 w-4 text-white/40 transition-transform group-hover:translate-x-1 group-hover:text-[#D4B779]" /></span>
               </span>
             </Link>
           </div>

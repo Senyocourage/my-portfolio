@@ -18,7 +18,7 @@ function SiteHeader() {
   }
 
   return (
-    <header className="relative z-20 border-b border-white/[0.06] bg-[#07182F]">
+    <header className="relative z-20 border-b border-white/[0.06] bg-[#07182F]/80 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:py-5">
         <Link
           to="/"
@@ -66,7 +66,7 @@ function SiteHeader() {
 
       <div
         id="mobile-navigation"
-        className={`${menuOpen ? 'grid' : 'hidden'} absolute inset-x-0 top-full gap-1 border-b border-white/10 bg-[#07182F] px-4 pb-4 pt-2 shadow-xl shadow-black/20 md:hidden`}
+        className={`${menuOpen ? 'grid' : 'hidden'} absolute inset-x-0 top-full gap-1 border-b border-white/10 bg-[#07182F]/95 px-4 pb-4 pt-2 shadow-xl shadow-black/20 backdrop-blur-sm md:hidden`}
       >
         {navigationItems.map((item) => (
           <NavLink

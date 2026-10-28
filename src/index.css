@@ -9,6 +9,37 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.site-logo-watermark {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-logo-watermark img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(88vw, 48rem);
+  height: auto;
+  opacity: 0.09;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  animation: logo-float 18s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(-3deg);
+  }
+
+  50% {
+    transform: translate(-50%, -52%) scale(1.04) rotate(3deg);
+  }
+}
+
 [data-scroll-reveal] {
   opacity: 0;
   transform: translateY(1rem);
@@ -23,6 +54,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-logo-watermark img {
+    animation: none;
+  }
+
   [data-scroll-reveal] {
     opacity: 1;
     transform: none;

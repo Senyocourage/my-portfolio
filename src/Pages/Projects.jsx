@@ -1,4 +1,5 @@
 
+import { ArrowUpRight, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import heroArt from '../assets/hero.png'
 import SiteHeader from '../components/SiteHeader'
@@ -95,17 +96,17 @@ function ProjectPreview({ type, title }) {
 
 function Projects() {
   return (
-    <div className="min-h-screen bg-[#07182F] text-white">
+    <div className="min-h-screen bg-transparent text-white">
       <SiteHeader />
 
       <main className="mx-auto min-h-[calc(100vh-150px)] w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <div className="mb-7 flex items-center justify-center gap-3 sm:mb-9">
-          <span aria-hidden="true" className="text-xl text-[#D4B779]/70 sm:text-2xl">✳</span>
+          <Sparkles aria-hidden="true" className="h-5 w-5 text-[#D4B779]/70 sm:h-6 sm:w-6" />
           <div className="text-center">
             <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/40">Selected work</p>
             <h1 className="mt-1 text-3xl font-semibold uppercase leading-none tracking-tight sm:text-5xl">All projects</h1>
           </div>
-          <span aria-hidden="true" className="text-xl text-[#D4B779]/70 sm:text-2xl">✳</span>
+          <Sparkles aria-hidden="true" className="h-5 w-5 text-[#D4B779]/70 sm:h-6 sm:w-6" />
         </div>
 
         <section aria-label="Project list" className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -126,7 +127,7 @@ function Projects() {
                   <p className="mt-2 text-xs leading-5 text-white/50">{project.description}</p>
                   <p className="mt-3 text-[10px] font-medium text-[#D4B779]/80">{project.tech}</p>
                 </div>
-                <span aria-hidden="true" className="mt-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 text-sm text-white/45 transition-colors group-hover:border-[#D4B779]/50 group-hover:text-[#D4B779]">↗</span>
+                <span aria-hidden="true" className="mt-3 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10 text-sm text-white/45 transition-colors group-hover:border-[#D4B779]/50 group-hover:text-[#D4B779]"><ArrowUpRight className="h-4 w-4" /></span>
               </div>
             </article>
           ))}
