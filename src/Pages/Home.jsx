@@ -5,7 +5,7 @@ import profile from '../assets/profile.jpg'
 import SiteHeader from '../components/SiteHeader'
 
 const cardClass =
-  'group min-w-0 overflow-hidden rounded-3xl border border-[#D4B779]/15 bg-[#102747] transition-colors duration-300 hover:border-[#D4B779]/45'
+  'group min-w-0 overflow-hidden rounded-3xl border border-[#D4B779]/15 bg-[#102747] transition duration-300 ease-out hover:-translate-y-1 hover:border-[#D4B779]/45 hover:shadow-xl hover:shadow-black/20 motion-reduce:transform-none'
 
 const eyebrowClass =
   'text-[10px] font-medium uppercase tracking-[0.16em] text-white/40'
@@ -55,10 +55,24 @@ function Home() {
             </article>
 
             <div className="grid gap-4 lg:col-span-6">
-              <div className="flex min-h-10 items-center overflow-hidden rounded-full border border-white/[0.08] bg-[#151515] px-4">
-                <p className="truncate text-[10px] uppercase tracking-[0.12em] text-white/45 sm:text-xs">
-                  Building for the web <span className="px-2 text-[#D4B779]">·</span> Exploring cloud systems <span className="px-2 text-[#D4B779]">·</span> Learning by shipping
-                </p>
+              <div
+                className="home-ticker flex min-h-10 items-center overflow-hidden rounded-full border border-white/[0.08] bg-[#151515] px-4"
+              >
+                <span className="sr-only">
+                  Building for the web. Exploring cloud systems. Learning by shipping.
+                </span>
+                <div className="home-ticker-track" aria-hidden="true">
+                  {[0, 1].map((copy) => (
+                    <div className="home-ticker-group" key={copy}>
+                      <span>Building for the web</span>
+                      <span className="text-[#D4B779]">·</span>
+                      <span>Exploring cloud systems</span>
+                      <span className="text-[#D4B779]">·</span>
+                      <span>Learning by shipping</span>
+                      <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#D4B779]" />
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -175,4 +189,3 @@ function Home() {
 }
 
 export default Home
-

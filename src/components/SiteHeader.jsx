@@ -18,8 +18,8 @@ function SiteHeader() {
   }
 
   return (
-    <header className="relative z-20 border-b border-white/[0.06] bg-[#07182F]/80 backdrop-blur-sm">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:py-5">
+    <header className="sticky top-0 z-20 px-4 pt-4 sm:px-6 sm:pt-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-2xl border border-white/[0.12] bg-[#0B2342]/55 px-4 py-3 shadow-lg shadow-black/15 backdrop-blur-xl sm:rounded-full sm:px-6">
         <Link
           to="/"
           aria-label="Courage Senyo home"
@@ -66,7 +66,7 @@ function SiteHeader() {
 
       <div
         id="mobile-navigation"
-        className={`${menuOpen ? 'grid' : 'hidden'} absolute inset-x-0 top-full gap-1 border-b border-white/10 bg-[#07182F]/95 px-4 pb-4 pt-2 shadow-xl shadow-black/20 backdrop-blur-sm md:hidden`}
+        className={`${menuOpen ? 'grid' : 'hidden'} absolute inset-x-4 top-[calc(100%-0.25rem)] mx-auto max-w-6xl gap-1 rounded-2xl border border-white/10 bg-[#0B2342]/95 px-3 pb-3 pt-2 shadow-xl shadow-black/20 backdrop-blur-xl sm:inset-x-6 md:hidden`}
       >
         {navigationItems.map((item) => (
           <NavLink
